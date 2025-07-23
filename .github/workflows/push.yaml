@@ -12,7 +12,6 @@ jobs:
     
      - name: Print a message
        run: echo "Hello from GitHub Actions!
-       
 
      - name: Log in to DockerHub
        uses: docker/login-action@v3
@@ -23,7 +22,6 @@ jobs:
      - name: Build and tag Docker image
        run: |
          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/isi_housing:latest ./api/.
-
 
      # Envoyer l'image dans Docker Hub
      - name: Push Docker image to Docker Hub
